@@ -8,19 +8,24 @@ def holidayGreeting(name, holiday, appropiateGreeting):
         name = "my Friend"
     return '{} {}, {}!'.format(appropiateGreeting, holiday, name)
 
-def fancyFrame(functionOutput):
+def frame(framechar):
     for i in range(81):
-        print('*', end='')
-    print('\n' + functionOutput.center(80))
-    for i in range(81):
-        print('*', end='')
+        print('#', end='')
+
+def fancyFrame(functionOutput, framechar):
+    frame(framechar) 
+    print('')
+    print(framechar + functionOutput.center(79) + framechar)
+    frame(framechar) 
     print('\n')
 
 def Main():
 
+    _FRAMECHAR = '#'
+
     holidayGreetingParams = ('', 'Eastern', 'Happy')
-    fancyFrame(holidayGreeting(*holidayGreetingParams))
-    fancyFrame(goodmorning('misi'))
+    fancyFrame(holidayGreeting(*holidayGreetingParams), _FRAMECHAR)
+    fancyFrame(goodmorning('misi'), _FRAMECHAR)
     
     
 
