@@ -1,20 +1,24 @@
 #!usr/env python3
 
 def goodmorning(name):
-    print('Good mornin, {}.'.format(name))
+    return 'Good mornin, {}.'.format(name)
 
 def holidayGreeting(name, holiday, appropiateGreeting):
+    if name == "" or name == None:
+        name = "my Friend"
     return '{} {}, {}!'.format(appropiateGreeting, holiday, name)
 
 def fancyFrame(functionOutput):
-    print('*********************************************************************************')
+    print('\n*********************************************************************************')
     print(functionOutput)
     print('*********************************************************************************')
 
 def Main():
 
-    holidayGreetingParams = ('misi', 'Eastern', 'Happy')
+    holidayGreetingParams = ('', 'Eastern', 'Happy')
     fancyFrame(holidayGreeting(*holidayGreetingParams))
+    fancyFrame(goodmorning('misi'))
+    
     
 
 
