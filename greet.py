@@ -9,9 +9,12 @@ def holidayGreeting(name, holiday, appropiateGreeting):
     return '{} {}, {}!'.format(appropiateGreeting, holiday, name)
 
 def fancyFrame(functionOutput):
-    print('\n*********************************************************************************')
-    print(functionOutput)
-    print('*********************************************************************************')
+    for i in range(81):
+        print('*', end='')
+    print('\n' + functionOutput.center(80))
+    for i in range(81):
+        print('*', end='')
+    print('\n')
 
 def Main():
 
