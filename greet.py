@@ -10,12 +10,16 @@ def holidayGreeting(name, holiday, appropiateGreeting):
 
 def frame(framechar):
     for i in range(81):
-        print('#', end='')
+        print(framechar, end='')
 
 def fancyFrame(functionOutput, framechar):
     frame(framechar) 
     print('')
-    print(framechar + functionOutput.center(79) + framechar)
+    frame(framechar) 
+    print('')
+    print(framechar + framechar + functionOutput.center(77) + framechar + framechar)
+    frame(framechar) 
+    print('')
     frame(framechar) 
     print('\n')
 
